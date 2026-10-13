@@ -200,11 +200,11 @@ def build_pdf(filename="Gunaseelan_N_Senior_Software_Engineer_Resume.pdf"):
     header_table_data = [
         [
             Paragraph("GUNASEELAN N", name_style),
-            Paragraph("<b>Mobile:</b> +91 89038 57336<br/><b>Email:</b> nguna.mdi@gmail.com", contact_style)
+            Paragraph("<b>Location:</b> Chennai, India<br/><b>Mobile:</b> +91 89038 57336", contact_style)
         ],
         [
             Paragraph("Lead Software Engineer | Agentic AI, Enterprise No-Code Platform & Full-Stack Architect", title_style),
-            Paragraph("<b>Web:</b> gunaangs.github.io<br/><b>Google Play:</b> pub: Angs Corp", contact_style)
+            Paragraph("<b>Email:</b> nguna.mdi@gmail.com<br/><b>Web:</b> gunaangs.github.io", contact_style)
         ]
     ]
     header_table = Table(header_table_data, colWidths=[364, 180])

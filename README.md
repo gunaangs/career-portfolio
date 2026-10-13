@@ -5,7 +5,7 @@
 [![Experience](https://img.shields.io/badge/Experience-11%2B%20Years-orange.svg)](#)
 
 > **Lead Software Engineer | Agentic AI, Enterprise No-Code Platform & Full-Stack Architect**  
-> 📍 Bangalore / Hosur / Remote, India | ✉️ [nguna.mdi@gmail.com](mailto:nguna.mdi@gmail.com) | 🌐 [gunaangs.github.io](https://gunaangs.github.io)
+> 📍 Chennai, India | ✉️ [nguna.mdi@gmail.com](mailto:nguna.mdi@gmail.com) | 🌐 [gunaangs.github.io](https://gunaangs.github.io)
 
 ---
 
