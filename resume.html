@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gunaseelan N - Lead Software Engineer Resume</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0f172a;
+      --accent: #1d4ed8;
+      --accent-hover: #1e40af;
+      --accent-light: #eff6ff;
+      --text: #1e293b;
+      --text-muted: #475569;
+      --text-light: #64748b;
+      --border: #e2e8f0;
+      --bg-card: #f8fafc;
+      --tag-bg: #eff6ff;
+      --tag-border: #bfdbfe;
+      --tag-text: #1d4ed8;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      color: var(--text);
+      background-color: #f1f5f9;
+      line-height: 1.48;
+      font-size: 13.5px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .page-container {
+      max-width: 920px;
+      margin: 28px auto;
+      background: #ffffff;
+      padding: 44px 52px;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
+      border-radius: 8px;
+    }
+
+    @media print {
+      body {
+        background: #ffffff;
+        font-size: 12px;
+        line-height: 1.42;
+      }
+      .page-container {
+        margin: 0;
+        padding: 20px 28px;
+        box-shadow: none;
+        max-width: 100%;
+        border-radius: 0;
+      }
+      .no-print {
+        display: none !important;
+      }
+      a {
+        text-decoration: none;
+        color: inherit !important;
+      }
+      .page-break {
+        page-break-before: always;
+      }
+      .section {
+        page-break-inside: avoid;
+      }
+      .role-block {
+        page-break-inside: avoid;
+      }
+    }
+
+    .toolbar {
+      max-width: 920px;
+      margin: 20px auto 0;
+      display: flex;
+      justify-content: flex-end;
+      gap: 12px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background-color: var(--accent);
+      color: #ffffff;
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-weight: 500;
+      font-size: 13px;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+      transition: background-color 0.2s;
+    }
+
+    .btn:hover {
+      background-color: var(--accent-hover);
+    }
+
+    .btn-secondary {
+      background-color: #ffffff;
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
+
+    .btn-secondary:hover {
+      background-color: #f8fafc;
+    }
+
+    /* Header */
+    header {
+      border-bottom: 2px solid var(--primary);
+      padding-bottom: 18px;
+      margin-bottom: 20px;
+    }
+
+    .header-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    h1 {
+      font-size: 30px;
+      font-weight: 700;
+      color: var(--primary);
+      letter-spacing: -0.5px;
+    }
+
+    .title {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--accent);
+      margin-top: 2px;
+    }
+
+    .contact-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 12px;
+      font-size: 12.5px;
+      color: var(--text-muted);
+    }
+
+    .contact-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .contact-item a {
+      color: var(--text-muted);
+      text-decoration: none;
+    }
+
+    .contact-item a:hover {
+      color: var(--accent);
+    }
+
+    /* Section Styling */
+    .section {
+      margin-bottom: 20px;
+    }
+
+    .section-title {
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--primary);
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 5px;
+      margin-bottom: 12px;
+    }
+
+    .summary-text {
+      color: var(--text);
+      line-height: 1.55;
+      font-size: 13px;
+    }
+
+    /* Skills Grid */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      row-gap: 7px;
+      column-gap: 14px;
+      font-size: 12.5px;
+    }
+
+    .skill-cat {
+      font-weight: 600;
+      color: var(--primary);
+    }
+
+    .skill-items {
+      color: var(--text-muted);
+    }
+
+    /* Roles */
+    .role-block {
+      margin-bottom: 18px;
+    }
+
+    .role-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 3px;
+      flex-wrap: wrap;
+    }
+
+    .role-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .role-company {
+      font-size: 13.5px;
+      font-weight: 600;
+      color: var(--accent);
+    }
+
+    .role-duration {
+      font-size: 12.5px;
+      font-weight: 500;
+      color: var(--text-light);
+    }
+
+    .role-subdesc {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+      font-style: italic;
+    }
+
+    ul.bullets {
+      list-style-type: disc;
+      padding-left: 18px;
+      color: var(--text);
+    }
+
+    ul.bullets li {
+      margin-bottom: 4px;
+      font-size: 12.5px;
+      line-height: 1.48;
+    }
+
+    ul.bullets li strong {
+      color: var(--primary);
+      font-weight: 600;
+    }
+
+    /* Project Cards */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+
+    @media (max-width: 680px) {
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .project-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 10px 12px;
+    }
+
+    .project-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 3px;
+    }
+
+    .project-name {
+      font-weight: 700;
+      font-size: 13px;
+      color: var(--primary);
+    }
+
+    .project-tech {
+      display: inline-block;
+      font-size: 10.5px;
+      font-weight: 600;
+      color: var(--tag-text);
+      background: var(--tag-bg);
+      border: 1px solid var(--tag-border);
+      padding: 1px 5px;
+      border-radius: 4px;
+    }
+
+    .project-desc {
+      font-size: 12px;
+      color: var(--text-muted);
+      line-height: 1.42;
+      margin-top: 3px;
+    }
+
+    .project-link {
+      display: inline-block;
+      margin-top: 5px;
+      font-size: 11.5px;
+      font-weight: 500;
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .project-link:hover {
+      text-decoration: underline;
+    }
+
+    /* Education */
+    .edu-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      margin-bottom: 4px;
+    }
+
+    .edu-degree {
+      font-size: 13.5px;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .edu-school {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text-muted);
+    }
+
+    .edu-meta {
+      font-size: 12.5px;
+      color: var(--text-light);
+    }
+
+    .edu-award {
+      font-size: 12px;
+      color: var(--text);
+      background: #f8fafc;
+      border-left: 3px solid var(--accent);
+      padding: 6px 10px;
+      margin-top: 5px;
+      border-radius: 0 4px 4px 0;
+      line-height: 1.45;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="toolbar no-print">
+    <button class="btn btn-secondary" onclick="window.print()">🖨️ Print / Save to PDF</button>
+    <a class="btn" href="Gunaseelan_N_Senior_Software_Engineer_Resume.pdf" download>⬇️ Download PDF Version</a>
+  </div>
+
+  <div class="page-container">
+    <!-- Header -->
+    <header>
+      <div class="header-top">
+        <div>
+          <h1>GUNASEELAN N</h1>
+          <div class="title">Lead Software Engineer | Agentic AI, Enterprise No-Code Platform & Full-Stack Architect</div>
+        </div>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-item">
+          📍 Bangalore / Hosur / Remote, India
+        </div>
+        <div class="contact-item">
+          📞 <a href="tel:+918903857336">+91 89038 57336</a>
+        </div>
+        <div class="contact-item">
+          ✉️ <a href="mailto:nguna.mdi@gmail.com">nguna.mdi@gmail.com</a>
+        </div>
+        <div class="contact-item">
+          🌐 <a href="https://gunaangs.github.io" target="_blank" rel="noopener">gunaangs.github.io</a>
+        </div>
+        <div class="contact-item">
+          📱 <a href="https://play.google.com/store/apps/developer?id=Angs+Corp" target="_blank" rel="noopener">Google Play: Angs Corp</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Executive Summary -->
+    <section class="section">
+      <div class="section-title">Executive Summary</div>
+      <p class="summary-text">
+        <strong>High-impact Lead Software Engineer with 11+ years of end-to-end engineering excellence</strong> architecting enterprise platforms, Agentic AI systems, enterprise No-Code application suites, and Mobile Device Management (MDM) engines. Technical core contributor to the <strong>Sovablu No-Code Platform</strong> (driving <strong>GalaxyONE</strong> multi-agent prompt engines, custom AI agentic tool creation, and <strong>AI xChange</strong> intelligent document processing with OCR-to-GenAI migration). Proven engineering leader directing cross-functional squads (10+ developers), delivering resilient microservices, and modernizing global enterprise systems. Solo creator and publisher of multiple high-grade mobile applications with 100% crash-free architecture and strict adherence to modern design standards (Material 3).
+      </p>
+    </section>
+
+    <!-- Core Competencies -->
+    <section class="section">
+      <div class="section-title">Core Competencies & Technical Stack</div>
+      <div class="skills-grid">
+        <div class="skill-cat">Agentic AI & GenAI</div>
+        <div class="skill-items">Agentic AI Workflows, GalaxyONE Multi-Agent Engine, Prompt Engineering & Orchestration, Custom AI Agentic Tools, AI xChange, OCR to GenAI Migration, LLM API Integration</div>
+
+        <div class="skill-cat">Enterprise No-Code</div>
+        <div class="skill-items">Sovablu Enterprise Platform Core, Job Schedulers, File Upload & Processing Components, Sovablu Drive Architecture, Framework Configuration Engines</div>
+
+        <div class="skill-cat">Backend & APIs</div>
+        <div class="skill-items">Java (Core & Advanced), Spring Boot, Microservices, RESTful API Design, Apple MDM Protocol, Android Management API, Kiosk & Lockdown Engines</div>
+
+        <div class="skill-cat">Frontend & Mobile</div>
+        <div class="skill-items">React.js, React Native, Android SDK (Java/XML), TypeScript, JavaScript (ES6+), Redux Toolkit, Tailwind CSS, Material 3</div>
+
+        <div class="skill-cat">Data & DevOps</div>
+        <div class="skill-items">MySQL, SQLite, Room DB, Firebase, Query Optimization, Git, Maven, Gradle, Jenkins, Docker, CI/CD Automation, JUnit Test Suites</div>
+
+        <div class="skill-cat">Leadership & Delivery</div>
+        <div class="skill-items">System Architecture, Technical Mentorship (10+ engineers), Agile/Scrum Sprint Planning, Code Reviews, Enterprise Client Stakeholder Alignment</div>
+      </div>
+    </section>
+
+    <!-- Professional Experience -->
+    <section class="section">
+      <div class="section-title">Professional Experience</div>
+
+      <!-- Role 1: Vaken - Sovablu -->
+      <div class="role-block">
+        <div class="role-header">
+          <div>
+            <span class="role-title">Software Engineer - Team Leader (No-Code Core & Agentic AI)</span> &bull; <span class="role-company">Vaken Technologies Pvt. Ltd.</span>
+          </div>
+          <div class="role-duration">May 2022 – Present</div>
+        </div>
+        <div class="role-subdesc">Sovablu Enterprise No-Code Platform & GalaxyONE Multi-Agent AI Engine</div>
+        <ul class="bullets">
+          <li><strong>GalaxyONE Agentic AI & Prompt Handling:</strong> Core developer in the <strong>GalaxyONE</strong> multi-agent architecture; engineered prompt-handling pipelines and designed custom <strong>AI agentic tools</strong> enabling specialized copilots to translate natural language specifications directly into functional enterprise application models.</li>
+          <li><strong>AI xChange & OCR-to-GenAI Migration:</strong> Spearheaded the evolution of <strong>AI xChange</strong> intelligent document processing component, migrating legacy OCR extraction workflows into advanced AI-enabled APIs and LLMs, drastically improving structured data extraction accuracy across complex documents and invoices.</li>
+          <li><strong>Sovablu Drive & File Framework Screens:</strong> Architected <strong>Sovablu Drive</strong>, the platform's central document and asset management system, alongside enterprise file upload components, chunked processing, validation pipelines, and dynamic configuration framework screens.</li>
+          <li><strong>Enterprise Job Scheduler Engine:</strong> Designed and implemented high-reliability enterprise Job Scheduler screens and backend execution frameworks to automate complex recurring workflows and background jobs across client applications.</li>
+        </ul>
+      </div>
+
+      <!-- Role 2: Vaken - iOS MDM -->
+      <div class="role-block">
+        <div class="role-header">
+          <div>
+            <span class="role-title">Software Engineer - Team Leader (iOS MDM Engine)</span> &bull; <span class="role-company">Vaken Technologies Pvt. Ltd.</span>
+          </div>
+          <div class="role-duration">Oct 2020 – May 2022</div>
+        </div>
+        <div class="role-subdesc">iOS Mobile Device Management (MDM) Engine & Concurrency Backend Architecture</div>
+        <ul class="bullets">
+          <li><strong>Architecture & Protocol Delivery:</strong> Architected and delivered high-throughput REST APIs for the enterprise iOS MDM Engine using Java and MySQL, strictly implementing Apple MDM Protocol specifications for device enrollment, remote command execution, and configuration profiles.</li>
+          <li><strong>Engineering Leadership:</strong> Led and mentored a squad of 10 backend engineers, driving sprint planning, requirement breakdowns, high/low-level design documentation, and peer code reviews with 99%+ sprint milestone adherence.</li>
+          <li><strong>Performance Optimization:</strong> Refactored mission-critical database schemas and tuned indexing on core device status tables, reducing API response latency and supporting seamless multi-tenant operations.</li>
+          <li><strong>Stakeholder Alignment:</strong> Conducted weekly technical demos and requirements syncs with overseas enterprise clients, translating complex compliance specifications into prioritized production sprints.</li>
+        </ul>
+      </div>
+
+      <!-- Role 3: Works Applications India - Android MDM -->
+      <div class="role-block">
+        <div class="role-header">
+          <div>
+            <span class="role-title">Software Engineer (Android MDM & Full-Stack Portal)</span> &bull; <span class="role-company">Works Applications (India) Pvt. Ltd.</span> <span style="font-size:11.5px;color:var(--text-light);">(formerly IVTL Infoview)</span>
+          </div>
+          <div class="role-duration">Sep 2019 – Jul 2020</div>
+        </div>
+        <div class="role-subdesc">Custom Android MDM Kiosk Launcher & Web Administrative Console</div>
+        <ul class="bullets">
+          <li><strong>Autonomous Kiosk Launcher Execution:</strong> Independently designed, built, and delivered an Android MDM Custom Launcher application within strict timelines, consuming MDM policy endpoints to enforce granular hardware restrictions and kiosk lock-down.</li>
+          <li><strong>Full-Stack Administrative Portal:</strong> Engineered a full-stack portal using React.js and Java backend to remotely configure, monitor, and enforce Google Android Management API policies across enterprise device fleets.</li>
+          <li><strong>Quality & Reliability:</strong> Authored complete Technical Design Documents (TDD) and instituted robust JUnit testing suites, achieving early milestone sign-off with zero critical production defects.</li>
+        </ul>
+      </div>
+
+      <!-- Role 4: Works Applications India - ERP -->
+      <div class="role-block">
+        <div class="role-header">
+          <div>
+            <span class="role-title">Junior Software Engineer (ERP & Supply Chain Solutions)</span> &bull; <span class="role-company">Works Applications (India) Pvt. Ltd.</span> <span style="font-size:11.5px;color:var(--text-light);">(formerly IVTL Infoview)</span>
+          </div>
+          <div class="role-duration">Apr 2017 – Sep 2019</div>
+        </div>
+        <div class="role-subdesc">Enterprise ERP Suites with AI & Automated Accounting Features for Japanese Market</div>
+        <ul class="bullets">
+          <li><strong>Enterprise Feature Engineering:</strong> Developed core transactional accounting and supply chain modules with automated validation rules and business intelligence dashboards for top-tier Japanese enterprises.</li>
+          <li><strong>Team Enablement & Mentorship:</strong> Guided junior developers on design patterns and module consolidation, standardizing code quality across cross-functional product squads.</li>
+        </ul>
+      </div>
+
+      <!-- Role 5: Works Applications India - Trainee -->
+      <div class="role-block">
+        <div class="role-header">
+          <div>
+            <span class="role-title">Trainee Engineer &bull; Full-Stack Migration</span> &bull; <span class="role-company">Works Applications (India) Pvt. Ltd.</span> <span style="font-size:11.5px;color:var(--text-light);">(formerly IVTL Infoview)</span>
+          </div>
+          <div class="role-duration">Jul 2015 – Mar 2017</div>
+        </div>
+        <div class="role-subdesc">Legacy Desktop Delphi to High-Availability Cloud Web Platform Migration</div>
+        <ul class="bullets">
+          <li><strong>Legacy Modernization:</strong> Re-engineered legacy desktop Delphi HR & Payroll software into modern Java web applications, implementing high-precision payroll compliance calculation engines.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Published Mobile Applications & Products -->
+    <section class="section">
+      <div class="section-title">Published Applications & Technical Innovations (Angs Corp)</div>
+      <div class="projects-grid">
+        <div class="project-card">
+          <div class="project-card-header">
+            <span class="project-name">Secure Notes</span>
+            <span class="project-tech">React Native &bull; Security</span>
+          </div>
+          <p class="project-desc">
+            Production-grade privacy-focused offline notes app featuring AES-256 local encryption, biometric authentication, dynamic Material 3 theming, and zero network transmission.
+          </p>
+          <a class="project-link" href="https://play.google.com/store/apps/details?id=com.angs.securenotes" target="_blank" rel="noopener">View on Google Play &rarr;</a>
+        </div>
+
+        <div class="project-card">
+          <div class="project-card-header">
+            <span class="project-name">MoneyWise</span>
+            <span class="project-tech">React Native &bull; FinTech</span>
+          </div>
+          <p class="project-desc">
+            Privacy-first personal finance tracker with multi-account ledgers, interactive budget analytics, multi-currency support, and offline-first SQLite database synchronization.
+          </p>
+          <a class="project-link" href="https://play.google.com/store/apps/developer?id=Angs+Corp" target="_blank" rel="noopener">View Publisher Portfolio &rarr;</a>
+        </div>
+
+        <div class="project-card">
+          <div class="project-card-header">
+            <span class="project-name">AppShield</span>
+            <span class="project-tech">React Native &bull; Privacy</span>
+          </div>
+          <p class="project-desc">
+            Mobile privacy and permission auditor that inspects third-party apps, background sensor/network access, and system security posture in real time.
+          </p>
+          <a class="project-link" href="https://play.google.com/store/apps/developer?id=Angs+Corp" target="_blank" rel="noopener">View Publisher Portfolio &rarr;</a>
+        </div>
+
+        <div class="project-card">
+          <div class="project-card-header">
+            <span class="project-name">PixelSqueeze</span>
+            <span class="project-tech">React Native &bull; Media Utility</span>
+          </div>
+          <p class="project-desc">
+            High-efficiency on-device image compression and format converter leveraging native bridge modules for hardware-accelerated processing without quality degradation.
+          </p>
+          <a class="project-link" href="https://play.google.com/store/apps/developer?id=Angs+Corp" target="_blank" rel="noopener">View Publisher Portfolio &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education & Honors -->
+    <section class="section">
+      <div class="section-title">Education & Honors</div>
+      <div class="edu-item">
+        <div>
+          <div class="edu-degree">Bachelor of Technology (B.Tech) in Information Technology</div>
+          <div class="edu-school">Adhiyamaan College of Engineering, Hosur &bull; Anna University</div>
+        </div>
+        <div class="edu-meta">
+          <strong>CGPA: 8.96 / 10</strong> &bull; Class of 2015
+        </div>
+      </div>
+      <div class="edu-award">
+        🏆 <strong>State Level Winner: "Student Innovator Award 2015" (ICTACT Tamil Nadu)</strong><br>
+        Published research & system: <em>"Uzhavan Puthagam: Web Based System of Effective Farm Collaboration"</em> (ACCCAS-2015 Conference) in Computer Science & IT Applications.
+      </div>
+    </section>
+
+  </div>
+
+</body>
+</html>
