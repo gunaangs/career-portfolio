@@ -1,11 +1,14 @@
 #!/usr/bin/env python3
 """
 Generate a professional, high-impact PDF resume for Gunaseelan N.
-Includes updated company details: Works Applications (India) Pvt. Ltd. (formerly IVTL Infoview)
-and rich experience in Sovablu No-Code Platform, GalaxyONE Agentic AI, AI xChange (OCR to GenAI),
-Sovablu Drive, and enterprise Job Schedulers.
-
-Formatted with precise visual balance: Page 1 holds Vaken + MDM Android; Page 2 holds ERP, Trainee, Published Apps, Education.
+Finetuned with:
+- PDF document metadata (Author, Title, Subject, Keywords for ATS indexers)
+- Interactive hyperlinks in PDF header (Email, Web, Mobile)
+- Refined action verbs & quantified engineering impact
+- Works Applications (India) Pvt. Ltd. (formerly IVTL Infoview)
+- Sovablu No-Code Platform, GalaxyONE Agentic AI, AI xChange, Sovablu Drive, Schedulers
+- Location strictly set to Chennai, India
+- Clean, exact 2-page layout
 """
 
 import os
@@ -50,7 +53,11 @@ def build_pdf(filename="Gunaseelan_N_Senior_Software_Engineer_Resume.pdf"):
         leftMargin=34,
         rightMargin=34,
         topMargin=32,
-        bottomMargin=32
+        bottomMargin=32,
+        title="Gunaseelan N - Lead Software Engineer Resume",
+        author="Gunaseelan N",
+        subject="Lead Software Engineer Resume - Agentic AI, Enterprise Platforms & Full-Stack",
+        keywords="Lead Software Engineer, Technical Lead, Agentic AI, GalaxyONE, Java, Spring Boot, React Native, Apple MDM, Android, Cloud, Microservices"
     )
 
     styles = getSampleStyleSheet()
@@ -141,7 +148,7 @@ def build_pdf(filename="Gunaseelan_N_Senior_Software_Engineer_Resume.pdf"):
         parent=styles['Normal'],
         fontName='Helvetica',
         fontSize=8,
-        leading=11,
+        leading=10.5,
         textColor=c_light,
         alignment=2
     )
@@ -196,15 +203,15 @@ def build_pdf(filename="Gunaseelan_N_Senior_Software_Engineer_Resume.pdf"):
 
     story = []
 
-    # 1. HEADER
+    # 1. HEADER WITH INTERACTIVE HYPERLINKS
     header_table_data = [
         [
             Paragraph("GUNASEELAN N", name_style),
-            Paragraph("<b>Location:</b> Chennai, India<br/><b>Mobile:</b> +91 89038 57336", contact_style)
+            Paragraph("<b>Location:</b> Chennai, India<br/><b>Phone:</b> <a href='tel:+918903857336'><font color='#1d4ed8'>+91 89038 57336</font></a>", contact_style)
         ],
         [
             Paragraph("Lead Software Engineer | Agentic AI, Enterprise No-Code Platform & Full-Stack Architect", title_style),
-            Paragraph("<b>Email:</b> nguna.mdi@gmail.com<br/><b>Web:</b> gunaangs.github.io", contact_style)
+            Paragraph("<b>Email:</b> <a href='mailto:nguna.mdi@gmail.com'><font color='#1d4ed8'>nguna.mdi@gmail.com</font></a><br/><b>Portfolio:</b> <a href='https://gunaangs.github.io'><font color='#1d4ed8'>gunaangs.github.io</font></a>", contact_style)
         ]
     ]
     header_table = Table(header_table_data, colWidths=[364, 180])
@@ -228,12 +235,12 @@ def build_pdf(filename="Gunaseelan_N_Senior_Software_Engineer_Resume.pdf"):
     # 2. EXECUTIVE SUMMARY
     story.extend(add_section_header("Executive Summary"))
     summary_p = Paragraph(
-        "<b>High-impact Lead Software Engineer with 11+ years of end-to-end engineering excellence</b> "
-        "architecting enterprise platforms, Agentic AI systems, enterprise No-Code application suites, and Mobile Device Management (MDM) engines. "
-        "Technical core contributor to the <b>Sovablu No-Code Platform</b> (driving <b>GalaxyONE</b> multi-agent prompt engines, custom AI agentic tool creation, "
+        "<b>Accomplished Lead Software Engineer with 11+ years of end-to-end engineering excellence</b> "
+        "architecting mission-critical enterprise platforms, Agentic AI systems, enterprise No-Code application suites, and Mobile Device Management (MDM) engines. "
+        "Technical core contributor to the <b>Sovablu No-Code Platform</b> (directing <b>GalaxyONE</b> multi-agent prompt engines, custom AI agentic tool creation, "
         "and <b>AI xChange</b> intelligent document processing with OCR-to-GenAI migration). "
         "Proven engineering leader directing cross-functional squads (10+ developers), delivering resilient microservices, "
-        "and modernizing global enterprise systems. Solo creator and publisher of multiple high-grade mobile applications with 100% crash-free "
+        "and modernizing global enterprise systems. Solo creator and publisher of multiple production-grade mobile applications with 100% crash-free "
         "architecture and strict adherence to modern design standards (Material 3).",
         body_style
     )
@@ -387,25 +394,25 @@ def build_pdf(filename="Gunaseelan_N_Senior_Software_Engineer_Resume.pdf"):
     p_secure_notes = [
         Paragraph("<b>Secure Notes</b> <font color='#1d4ed8' size='7.2'>[React Native | Security]</font>", card_title_style),
         Paragraph("Production-grade offline notes app with AES-256 local encryption, biometric lock, dynamic Material 3 theming, and zero network transmission.", card_desc_style),
-        Paragraph("<u>Google Play: com.angs.securenotes</u>", card_link_style)
+        Paragraph("<a href='https://play.google.com/store/apps/details?id=com.angs.securenotes'><font color='#1d4ed8'><u>Google Play: com.angs.securenotes</u></font></a>", card_link_style)
     ]
 
     p_moneywise = [
         Paragraph("<b>MoneyWise</b> <font color='#1d4ed8' size='7.2'>[React Native | FinTech]</font>", card_title_style),
         Paragraph("Comprehensive personal finance tracker with multi-account ledgers, interactive budget analytics, multi-currency support, and offline-first SQLite sync.", card_desc_style),
-        Paragraph("<u>Google Play: com.angs.moneywise</u>", card_link_style)
+        Paragraph("<a href='https://play.google.com/store/apps/developer?id=Angs+Corp'><font color='#1d4ed8'><u>Google Play: Angs Corp Portfolio</u></font></a>", card_link_style)
     ]
 
     p_appshield = [
         Paragraph("<b>AppShield</b> <font color='#1d4ed8' size='7.2'>[React Native | Privacy]</font>", card_title_style),
         Paragraph("Privacy & permission auditor inspecting third-party apps, background sensor/network access, and system security posture in real time.", card_desc_style),
-        Paragraph("<u>Google Play: com.angs.appshield</u>", card_link_style)
+        Paragraph("<a href='https://play.google.com/store/apps/developer?id=Angs+Corp'><font color='#1d4ed8'><u>Google Play: Angs Corp Portfolio</u></font></a>", card_link_style)
     ]
 
     p_pixelsqueeze = [
         Paragraph("<b>PixelSqueeze</b> <font color='#1d4ed8' size='7.2'>[React Native | Media Utility]</font>", card_title_style),
         Paragraph("High-speed on-device image compression and format converter leveraging native bridge modules for hardware-accelerated processing.", card_desc_style),
-        Paragraph("<u>Google Play: com.angs.pixelsqueeze</u>", card_link_style)
+        Paragraph("<a href='https://play.google.com/store/apps/developer?id=Angs+Corp'><font color='#1d4ed8'><u>Google Play: Angs Corp Portfolio</u></font></a>", card_link_style)
     ]
 
     col1 = [
