@@ -258,7 +258,7 @@ def build_pdf(filename="Gunaseelan_N_Senior_Software_Engineer_Resume.pdf"):
         [Paragraph("Enterprise Platform Core:", skill_label_style), Paragraph("Sovablu No-Code Platform Core, Distributed Job Schedulers, Sovablu Drive Architecture, Chunked Multipart File Streaming, Dynamic Configuration Engines", skill_val_style)],
         [Paragraph("Backend & Protocols:", skill_label_style), Paragraph("Java (Core & Advanced), Spring Boot, Microservices, RESTful APIs, Apple MDM Protocol, Android Management API, Kiosk & Lockdown Engines, Mutual TLS", skill_val_style)],
         [Paragraph("Frontend & Mobile:", skill_label_style), Paragraph("React.js, React Native, Android SDK (Java/XML), TypeScript, JavaScript (ES6+), Redux Toolkit, Tailwind CSS, Material 3 Design", skill_val_style)],
-        [Paragraph("Data & DevOps:", skill_label_style), Paragraph("MySQL, SQLite, Room DB, Firebase, Query Optimization, Git, Maven, Gradle, Jenkins, Docker, CI/CD Pipelines, JUnit Test Suites", skill_val_style)],
+        [Paragraph("Data & DevOps:", skill_label_style), Paragraph("MySQL, SQLite, Firebase, Query Optimization, Database Schema Design, Git, Maven, Gradle, Jenkins, Docker, CI/CD Pipelines, JUnit", skill_val_style)],
     ]
     skills_table = Table(skills_data, colWidths=[120, 424])
     skills_table.setStyle(TableStyle([

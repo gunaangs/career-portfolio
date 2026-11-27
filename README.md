@@ -42,7 +42,7 @@
 * **Enterprise Core & Cloud**: Sovablu Platform, Distributed Job Schedulers, Chunked File Processing, Sovablu Drive, Microservices Architecture.
 * **Backend & Systems**: Java (Core & Advanced), Spring Boot, RESTful APIs, Apple MDM Protocol, Android Management API, Kiosk & Lockdown Engines.
 * **Frontend & Mobile**: React.js, React Native, Android SDK (Java/XML), TypeScript, JavaScript (ES6+), Redux Toolkit, Material Design 3.
-* **Databases & DevOps**: MySQL, SQLite, Room DB, Firebase, Query Optimization, Git, Maven, Gradle, Jenkins, Docker, CI/CD, JUnit.
+* **Databases & DevOps**: MySQL, SQLite, Firebase, Query Optimization, Database Schema Design, Git, Maven, Gradle, Jenkins, Docker, CI/CD, JUnit.
 
 ---
 
