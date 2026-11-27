@@ -327,11 +327,11 @@ def build_pdf(filename="Gunaseelan_N_Senior_Software_Engineer_Resume.pdf"):
     # --- PAGE 2 ---
     story.extend(add_section_header("Professional Experience (Continued)"))
 
-    # Role 3: Works Applications India - Android MDM
+    # Role 3: Works Applications India - Android & iOS MDM
     r3_header = [
         [
-            Paragraph("<b>Software Engineer (Android MDM & Full-Stack Portal)</b> | <font color='#1d4ed8'><b>Works Applications (India) Pvt. Ltd.</b></font> <font color='#64748b' size='7'>(formerly IVTL Infoview)</font>", role_title_style),
-            Paragraph("Sep 2019 – Jul 2020", role_meta_style)
+            Paragraph("<b>Software Engineer (MDM Engineering & Full-Stack Portal)</b> | <font color='#1d4ed8'><b>Works Applications (India) Pvt. Ltd.</b></font> <font color='#64748b' size='7'>(formerly IVTL Infoview)</font>", role_title_style),
+            Paragraph("Sep 2019 – Sep 2020", role_meta_style)
         ]
     ]
     t_r3 = Table(r3_header, colWidths=[404, 140])
