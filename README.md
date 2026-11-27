@@ -13,8 +13,9 @@
 
 | Document | Format | Description |
 | :--- | :--- | :--- |
-| **[Executive Resume](resume.html)** | 🌐 [Interactive Web / HTML](resume.html) | Modern responsive resume with clean typography & print-to-PDF button. |
-| **[Official Vector PDF Resume](Gunaseelan_N_Senior_Software_Engineer_Resume.pdf)** | 📄 [Download PDF](Gunaseelan_N_Senior_Software_Engineer_Resume.pdf) | ATS-optimized, 2-page vector PDF built for job applications. |
+| **[Executive Resume (Modern 2026 Trend)](modern_resume.html)** | 🌟 [Modern Hybrid Sidebar View](modern_resume.html) | Modern dark-accent sidebar layout with skill pills, JetBrains Mono dates, and high-impact design. |
+| **[Executive Resume (Classic ATS)](resume.html)** | 🌐 [Interactive Web / HTML](resume.html) | Clean, single-column ATS-optimized typography layout with print button. |
+| **[Official Vector PDF Resume](Gunaseelan_N_Senior_Software_Engineer_Resume.pdf)** | 📄 [Download PDF](Gunaseelan_N_Senior_Software_Engineer_Resume.pdf) | ATS-optimized, 2-page vector PDF built for direct job applications. |
 | **[FAANG / MANGA Blueprint](FAANG_INTERVIEW_BLUEPRINT.md)** | 📘 [Markdown Guide](FAANG_INTERVIEW_BLUEPRINT.md) | Comprehensive L5/L6 interview strategy, company rubrics, and 8-week plan. |
 | **[System Design Workbook](SYSTEM_DESIGN_WORKBOOK.md)** | 📐 [Architecture Deep Dive](SYSTEM_DESIGN_WORKBOOK.md) | 4 complete planetary-scale designs (Scheduler, Cloud Drive, Agentic AI, MDM). |
 | **[Coding & DSA Patterns](CODING_DSA_WORKBOOK.md)** | 💻 [Java DSA Guide](CODING_DSA_WORKBOOK.md) | Production Java solutions for top LeetCode patterns asked at FAANG. |
