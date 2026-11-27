@@ -4,7 +4,7 @@
 [![Google Play](https://img.shields.io/badge/Google%20Play-Angs%20Corp-green.svg)](https://play.google.com/store/apps/developer?id=Angs+Corp)
 [![Experience](https://img.shields.io/badge/Experience-11%2B%20Years-orange.svg)](#)
 
-> **Lead Software Engineer | Agentic AI, Enterprise No-Code Platform & Full-Stack Architect**  
+> **Lead Applied GenAI Engineer | Technical Lead & Enterprise Agentic AI Architect**  
 > 📍 Chennai, India | ✉️ [nguna.mdi@gmail.com](mailto:nguna.mdi@gmail.com) | 🌐 [gunaangs.github.io](https://gunaangs.github.io)
 
 ---
@@ -26,7 +26,7 @@
 ## 👨‍💻 Professional Summary
 
 * **11+ Years of Continuous Engineering Excellence**: Progressive leadership from Trainee $\rightarrow$ Senior Engineer $\rightarrow$ Team Leader (managing 10+ developers).
-* **Enterprise Platforms & Agentic AI**: Core contributor to the **Sovablu Enterprise No-Code Platform**, driving **GalaxyONE** multi-agent prompt engines, custom AI agentic tools, and **AI xChange** intelligent document processing (OCR to GenAI migration).
+* **Enterprise Platforms & Applied GenAI**: Core architect on **GalaxyONE**, an autonomous multi-agent AI engine synthesizing **multi-tier UI JSON schemas and enterprise application logic** from natural language prompts via specialized agentic workflows. Engineered **token- and cost-effective skills/tools** with prompt caching, schema pruning, and multi-stage **guardrails & evaluation loops** ensuring deterministic output quality. Overhauled **AI xChange** from legacy OCR to multimodal GenAI pipelines.
 * **Enterprise Mobility & OS Security**: Architected high-concurrency APIs for the **iOS Mobile Device Management (MDM) Engine** (strictly adhering to Apple MDM specifications) and built custom **Android Kiosk Lockdowns** via Google Android Management API.
 * **Independent Publisher (Angs Corp)**: Creator of production-grade mobile applications with 100% crash-free architecture and Material 3 design standards:
   * **[Secure Notes](https://play.google.com/store/apps/details?id=com.angs.securenotes)** (AES-256 local encryption, biometric security)

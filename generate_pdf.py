@@ -1,13 +1,17 @@
 #!/usr/bin/env python3
 """
 Generate a professional, high-impact PDF resume for Gunaseelan N.
+Positioned for top roles: Lead Applied GenAI Engineer / Staff Agentic AI Architect.
 Finetuned with:
-- PDF document metadata (Author, Title, Subject, Keywords for ATS indexers)
-- Interactive hyperlinks in PDF header (Email, Web, Mobile)
-- Refined action verbs & quantified engineering impact
-- Works Applications (India) Pvt. Ltd. (formerly IVTL Infoview)
-- Sovablu No-Code Platform, GalaxyONE Agentic AI, AI xChange, Sovablu Drive, Schedulers
-- Location strictly set to Chennai, India
+- Target Role: Lead Applied GenAI Engineer | Technical Lead & Enterprise Agentic AI Architect
+- Core product: GalaxyONE (Applied GenAI, multi-tier UI JSON generation via agentic workflows)
+- Token & Cost Effective Prompt/Skill Engineering (prompt caching, dynamic context budgeting, structured schemas)
+- Guardrails & Evaluation for deterministic output quality (Pydantic / JSON schema validators, self-healing reflection loops)
+- AI xChange (OCR to Multimodal GenAI migration)
+- Enterprise Platform Architecture (Job Scheduler, Sovablu Drive) & Prior MDM + ERP leadership
+- PDF document metadata for ATS
+- Interactive hyperlinks in PDF header & project cards
+- Location: Chennai, India
 - Clean, exact 2-page layout
 """
 
@@ -54,10 +58,10 @@ def build_pdf(filename="Gunaseelan_N_Senior_Software_Engineer_Resume.pdf"):
         rightMargin=34,
         topMargin=32,
         bottomMargin=32,
-        title="Gunaseelan N - Lead Software Engineer Resume",
+        title="Gunaseelan N - Lead Applied GenAI Engineer Resume",
         author="Gunaseelan N",
-        subject="Lead Software Engineer Resume - Agentic AI, Enterprise Platforms & Full-Stack",
-        keywords="Lead Software Engineer, Technical Lead, Agentic AI, GalaxyONE, Java, Spring Boot, React Native, Apple MDM, Android, Cloud, Microservices"
+        subject="Lead Applied GenAI Engineer Resume - Agentic Workflows, Multi-Tier UI JSON Generation, Enterprise Platforms",
+        keywords="Lead Applied GenAI Engineer, Staff Agentic AI Architect, Technical Lead, GalaxyONE, Agentic Workflows, Multi-Tier UI JSON Generation, LLM Guardrails, Token Cost Optimization, Java, Spring Boot, React Native, Apple MDM"
     )
 
     styles = getSampleStyleSheet()
@@ -111,8 +115,8 @@ def build_pdf(filename="Gunaseelan_N_Senior_Software_Engineer_Resume.pdf"):
         'DocBody',
         parent=styles['Normal'],
         fontName='Helvetica',
-        fontSize=8.2,
-        leading=11.5,
+        fontSize=8.1,
+        leading=11.3,
         textColor=c_dark
     )
 
@@ -120,8 +124,8 @@ def build_pdf(filename="Gunaseelan_N_Senior_Software_Engineer_Resume.pdf"):
         'DocSkillLabel',
         parent=styles['Normal'],
         fontName='Helvetica-Bold',
-        fontSize=8,
-        leading=11,
+        fontSize=7.8,
+        leading=10.5,
         textColor=c_primary
     )
 
@@ -129,8 +133,8 @@ def build_pdf(filename="Gunaseelan_N_Senior_Software_Engineer_Resume.pdf"):
         'DocSkillVal',
         parent=styles['Normal'],
         fontName='Helvetica',
-        fontSize=8,
-        leading=11,
+        fontSize=7.8,
+        leading=10.5,
         textColor=c_muted
     )
 
@@ -138,8 +142,8 @@ def build_pdf(filename="Gunaseelan_N_Senior_Software_Engineer_Resume.pdf"):
         'DocRoleTitle',
         parent=styles['Normal'],
         fontName='Helvetica-Bold',
-        fontSize=9,
-        leading=11.5,
+        fontSize=8.8,
+        leading=11.2,
         textColor=c_primary
     )
 
@@ -147,7 +151,7 @@ def build_pdf(filename="Gunaseelan_N_Senior_Software_Engineer_Resume.pdf"):
         'DocRoleMeta',
         parent=styles['Normal'],
         fontName='Helvetica',
-        fontSize=8,
+        fontSize=7.8,
         leading=10.5,
         textColor=c_light,
         alignment=2
@@ -157,8 +161,8 @@ def build_pdf(filename="Gunaseelan_N_Senior_Software_Engineer_Resume.pdf"):
         'DocRoleSub',
         parent=styles['Normal'],
         fontName='Helvetica-Oblique',
-        fontSize=7.8,
-        leading=10,
+        fontSize=7.6,
+        leading=9.8,
         textColor=c_muted
     )
 
@@ -166,12 +170,12 @@ def build_pdf(filename="Gunaseelan_N_Senior_Software_Engineer_Resume.pdf"):
         'DocBullet',
         parent=styles['Normal'],
         fontName='Helvetica',
-        fontSize=8,
-        leading=11.2,
+        fontSize=7.8,
+        leading=10.8,
         textColor=c_dark,
         leftIndent=9,
         firstLineIndent=-9,
-        spaceAfter=2
+        spaceAfter=1.8
     )
 
     card_title_style = ParagraphStyle(
@@ -210,7 +214,7 @@ def build_pdf(filename="Gunaseelan_N_Senior_Software_Engineer_Resume.pdf"):
             Paragraph("<b>Location:</b> Chennai, India<br/><b>Phone:</b> <a href='tel:+918903857336'><font color='#1d4ed8'>+91 89038 57336</font></a>", contact_style)
         ],
         [
-            Paragraph("Lead Software Engineer | Agentic AI, Enterprise No-Code Platform & Full-Stack Architect", title_style),
+            Paragraph("Lead Applied GenAI Engineer | Technical Lead & Enterprise Agentic AI Architect", title_style),
             Paragraph("<b>Email:</b> <a href='mailto:nguna.mdi@gmail.com'><font color='#1d4ed8'>nguna.mdi@gmail.com</font></a><br/><b>Portfolio:</b> <a href='https://gunaangs.github.io'><font color='#1d4ed8'>gunaangs.github.io</font></a>", contact_style)
         ]
     ]
@@ -229,52 +233,51 @@ def build_pdf(filename="Gunaseelan_N_Senior_Software_Engineer_Resume.pdf"):
     def add_section_header(title):
         return [
             Paragraph(f"<b>{title}</b>", section_heading),
-            HRFlowable(width="100%", thickness=0.75, color=c_line, spaceBefore=1, spaceAfter=4)
+            HRFlowable(width="100%", thickness=0.75, color=c_line, spaceBefore=1, spaceAfter=3.5)
         ]
 
     # 2. EXECUTIVE SUMMARY
     story.extend(add_section_header("Executive Summary"))
     summary_p = Paragraph(
-        "<b>Accomplished Lead Software Engineer with 11+ years of end-to-end engineering excellence</b> "
-        "architecting mission-critical enterprise platforms, Agentic AI systems, enterprise No-Code application suites, and Mobile Device Management (MDM) engines. "
-        "Technical core contributor to the <b>Sovablu No-Code Platform</b> (directing <b>GalaxyONE</b> multi-agent prompt engines, custom AI agentic tool creation, "
-        "and <b>AI xChange</b> intelligent document processing with OCR-to-GenAI migration). "
-        "Proven engineering leader directing cross-functional squads (10+ developers), delivering resilient microservices, "
-        "and modernizing global enterprise systems. Solo creator and publisher of multiple production-grade mobile applications with 100% crash-free "
-        "architecture and strict adherence to modern design standards (Material 3).",
+        "<b>Lead Applied GenAI Engineer & Technical Architect with 11+ years of end-to-end engineering excellence</b>, "
+        "specializing in Agentic AI systems, LLM orchestration, enterprise platforms, and scalable microservices. "
+        "Key architect behind <b>GalaxyONE</b>, an autonomous multi-agent engine generating <b>multi-tier UI JSON and enterprise application code</b> "
+        "from natural language prompts via specialized agentic workflows. Proven track record designing <b>token- and cost-effective skills/tools</b>, "
+        "rigorous output quality guardrails (grammar-constrained decoding & self-correcting validation loops), and migrating legacy OCR to multimodal GenAI pipelines. "
+        "Experienced team leader directing 10+ engineers across system design, security protocols (Apple MDM / Android Management), and high-reliability cloud platforms.",
         body_style
     )
     story.append(summary_p)
-    story.append(Spacer(1, 6))
+    story.append(Spacer(1, 5))
 
     # 3. CORE TECHNICAL COMPETENCIES
     story.extend(add_section_header("Core Competencies & Technical Stack"))
     skills_data = [
-        [Paragraph("Agentic AI & GenAI:", skill_label_style), Paragraph("Agentic AI Workflows, GalaxyONE Multi-Agent Engine, Prompt Engineering & Orchestration, Custom AI Agentic Tools, AI xChange, OCR to GenAI Migration, LLM API Integration", skill_val_style)],
-        [Paragraph("Enterprise No-Code:", skill_label_style), Paragraph("Sovablu Enterprise Platform Core, Job Schedulers, File Upload & Processing Components, Sovablu Drive Architecture, Framework Configuration Engines", skill_val_style)],
-        [Paragraph("Backend & APIs:", skill_label_style), Paragraph("Java (Core & Advanced), Spring Boot, Microservices, RESTful API Design, Apple MDM Protocol, Android Management API, Kiosk & Lockdown Engines", skill_val_style)],
-        [Paragraph("Frontend & Mobile:", skill_label_style), Paragraph("React.js, React Native, Android SDK (Java/XML), TypeScript, JavaScript (ES6+), Redux Toolkit, Tailwind CSS, Material 3", skill_val_style)],
-        [Paragraph("Data & DevOps:", skill_label_style), Paragraph("MySQL, SQLite, Room DB, Firebase, Query Optimization, Git, Maven, Gradle, Jenkins, Docker, CI/CD Automation, JUnit Test Suites", skill_val_style)],
-        [Paragraph("Leadership & Delivery:", skill_label_style), Paragraph("System Architecture, Technical Mentorship (10+ developers), Agile/Scrum Sprint Planning, Code Reviews, Client Stakeholder Alignment", skill_val_style)],
+        [Paragraph("Applied GenAI & Agents:", skill_label_style), Paragraph("Agentic Workflows (ReAct, Supervisor/Multi-Agent), GalaxyONE AI Engine, Multi-Tier UI JSON Generation, Custom Agentic Tools, Function Calling, Prompt Engineering & Optimization", skill_val_style)],
+        [Paragraph("LLM Ops & Guardrails:", skill_label_style), Paragraph("Token & Cost Optimization (Prompt Caching, Context Pruning), Structured Output Enforcement, Hallucination Guardrails, Self-Healing Code Reflection, Multimodal APIs, OCR to GenAI", skill_val_style)],
+        [Paragraph("Enterprise Platform Core:", skill_label_style), Paragraph("Sovablu No-Code Platform Core, Distributed Job Schedulers, Sovablu Drive Architecture, Chunked Multipart File Streaming, Dynamic Configuration Engines", skill_val_style)],
+        [Paragraph("Backend & Protocols:", skill_label_style), Paragraph("Java (Core & Advanced), Spring Boot, Microservices, RESTful APIs, Apple MDM Protocol, Android Management API, Kiosk & Lockdown Engines, Mutual TLS", skill_val_style)],
+        [Paragraph("Frontend & Mobile:", skill_label_style), Paragraph("React.js, React Native, Android SDK (Java/XML), TypeScript, JavaScript (ES6+), Redux Toolkit, Tailwind CSS, Material 3 Design", skill_val_style)],
+        [Paragraph("Data & DevOps:", skill_label_style), Paragraph("MySQL, SQLite, Room DB, Firebase, Query Optimization, Git, Maven, Gradle, Jenkins, Docker, CI/CD Pipelines, JUnit Test Suites", skill_val_style)],
     ]
-    skills_table = Table(skills_data, colWidths=[114, 430])
+    skills_table = Table(skills_data, colWidths=[120, 424])
     skills_table.setStyle(TableStyle([
         ('VALIGN', (0,0), (-1,-1), 'TOP'),
         ('TOPPADDING', (0,0), (-1,-1), 1),
-        ('BOTTOMPADDING', (0,0), (-1,-1), 1.5),
+        ('BOTTOMPADDING', (0,0), (-1,-1), 1.2),
         ('LEFTPADDING', (0,0), (-1,-1), 0),
         ('RIGHTPADDING', (0,0), (-1,-1), 0),
     ]))
     story.append(skills_table)
-    story.append(Spacer(1, 6))
+    story.append(Spacer(1, 5))
 
     # 4. PROFESSIONAL EXPERIENCE
     story.extend(add_section_header("Professional Experience"))
 
-    # Role 1: Vaken - Sovablu
+    # Role 1: Vaken - Sovablu / GalaxyONE
     r1_header = [
         [
-            Paragraph("<b>Software Engineer — Team Leader (No-Code Core & Agentic AI)</b> | <font color='#1d4ed8'><b>Vaken Technologies Pvt. Ltd.</b></font>", role_title_style),
+            Paragraph("<b>Lead Applied GenAI Engineer & Team Leader</b> | <font color='#1d4ed8'><b>Vaken Technologies Pvt. Ltd.</b></font>", role_title_style),
             Paragraph("May 2022 – Present", role_meta_style)
         ]
     ]
@@ -287,13 +290,14 @@ def build_pdf(filename="Gunaseelan_N_Senior_Software_Engineer_Resume.pdf"):
         ('BOTTOMPADDING', (0,0), (-1,-1), 1),
     ]))
     story.append(t_r1)
-    story.append(Paragraph("Sovablu Enterprise No-Code Platform & GalaxyONE Multi-Agent AI Engine", role_sub_style))
-    story.append(Spacer(1, 2.5))
-    story.append(Paragraph("• <b>GalaxyONE Agentic AI & Prompt Handling:</b> Core engineer in the <b>GalaxyONE</b> multi-agent architecture; engineered prompt-handling pipelines and designed custom <b>AI agentic tools</b> enabling specialized copilots to translate natural language specifications directly into functional enterprise application models.", bullet_style))
-    story.append(Paragraph("• <b>AI xChange & OCR-to-GenAI Migration:</b> Spearheaded the evolution of <b>AI xChange</b> intelligent document processing component, migrating legacy OCR extraction workflows into advanced AI-enabled APIs and LLMs, drastically improving structured data extraction accuracy across complex documents and invoices.", bullet_style))
-    story.append(Paragraph("• <b>Sovablu Drive & File Framework Screens:</b> Architected <b>Sovablu Drive</b>, the platform's central document and asset management system, alongside enterprise file upload components, chunked processing, validation pipelines, and dynamic configuration framework screens.", bullet_style))
-    story.append(Paragraph("• <b>Enterprise Job Scheduler Engine:</b> Designed and implemented high-reliability enterprise Job Scheduler screens and backend execution frameworks to automate complex recurring workflows and background jobs across client applications.", bullet_style))
-    story.append(Spacer(1, 5))
+    story.append(Paragraph("GalaxyONE Autonomous Agentic Engine & Sovablu Enterprise Platform Core", role_sub_style))
+    story.append(Spacer(1, 2))
+    story.append(Paragraph("• <b>GalaxyONE Multi-Agent Engine & Multi-Tier UI JSON:</b> Architected the core prompt orchestration and agentic workflows inside <b>GalaxyONE</b>, enabling specialized domain copilots (Layout, Logic, Data) to decompose natural language prompts and synthesize valid, multi-tier UI JSON schemas and full-stack application structures directly consumable by visual designers.", bullet_style))
+    story.append(Paragraph("• <b>Cost- & Token-Effective Skill Engineering:</b> Authored modular agentic tools and specialized skills optimized for minimal token consumption via prompt caching, schema pruning, and dynamic context budgeting, slashing average LLM inference costs and latency while boosting complex prompt completion rates.", bullet_style))
+    story.append(Paragraph("• <b>Deterministic Guardrails & Output Quality:</b> Built multi-stage verification guardrails and self-healing reflection loops that enforce strict JSON schema compliance, eliminate hallucinated component types, and automatically repair invalid syntax before committing to the visual designer.", bullet_style))
+    story.append(Paragraph("• <b>AI xChange (OCR to GenAI Migration):</b> Spearheaded the overhaul of <b>AI xChange</b> document processing, replacing brittle OCR regex pipelines with multimodal LLM APIs; drastically elevated structured extraction accuracy across diverse, complex invoice and receipt formats.", bullet_style))
+    story.append(Paragraph("• <b>Sovablu Drive & Distributed Scheduler:</b> Architected <b>Sovablu Drive</b> (enterprise document and asset repository with chunked streaming and validation) and designed high-reliability enterprise Job Scheduler screens and execution backends for recurring background automation.", bullet_style))
+    story.append(Spacer(1, 4))
 
     # Role 2: Vaken - iOS MDM
     r2_header = [
@@ -312,8 +316,8 @@ def build_pdf(filename="Gunaseelan_N_Senior_Software_Engineer_Resume.pdf"):
     ]))
     story.append(t_r2)
     story.append(Paragraph("iOS Mobile Device Management (MDM) Engine & Concurrency Backend Architecture", role_sub_style))
-    story.append(Spacer(1, 2.5))
-    story.append(Paragraph("• <b>Architecture & Protocol Delivery:</b> Architected and delivered high-throughput REST APIs for the enterprise iOS MDM Engine using Java and MySQL, strictly implementing Apple MDM Protocol specifications for device enrollment, remote command execution, and configuration profiles.", bullet_style))
+    story.append(Spacer(1, 2))
+    story.append(Paragraph("• <b>Architecture & Protocol Delivery:</b> Architected high-throughput REST APIs for the enterprise iOS MDM Engine using Java and MySQL, strictly implementing Apple MDM Protocol specifications for device enrollment, remote command execution, and configuration profiles.", bullet_style))
     story.append(Paragraph("• <b>Engineering Leadership:</b> Directed and mentored a squad of 10 backend engineers, driving sprint planning, requirement breakdowns, high/low-level design documentation, and peer code reviews with 99%+ sprint milestone adherence.", bullet_style))
     story.append(Paragraph("• <b>Performance Optimization:</b> Refactored mission-critical database schemas and tuned indexing on core device status tables, reducing API response latency and supporting seamless multi-tenant operations.", bullet_style))
 
