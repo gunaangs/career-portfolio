@@ -365,7 +365,7 @@ def build_pdf(filename="Gunaseelan_N_Senior_Software_Engineer_Resume.pdf"):
         ('BOTTOMPADDING', (0,0), (-1,-1), 1),
     ]))
     story.append(t_r4)
-    story.append(Paragraph("Enterprise ERP Suites with AI & Automated Accounting Features for Japanese Market", role_sub_style))
+    story.append(Paragraph("Enterprise ERP Suites & Automated Accounting Features for Japanese Market", role_sub_style))
     story.append(Spacer(1, 2.5))
     story.append(Paragraph("• <b>Enterprise Feature Engineering:</b> Developed core transactional accounting and supply chain modules with automated validation rules and business intelligence dashboards for top-tier Japanese enterprises.", bullet_style))
     story.append(Paragraph("• <b>Team Enablement & Mentorship:</b> Guided junior developers on design patterns and module consolidation, standardizing code quality across cross-functional product squads.", bullet_style))
